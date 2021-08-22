@@ -55,20 +55,29 @@ You will also see any lint errors in the console.
 
 In App.jsx file(inside src directory), make changes as follows to view various pages:
 
+For Home Page:
+```
  const App = () => {
         return <Home />;
       };
-For Home Page
+```
+For login Page
 
+```
 const App = () => {
   return <Login />;
 };
-
+```
+For Register Page: 
+``` 
 const App = () => {
   return <Register />;
-};`
+};
+```
+For Watch Page:
 
+```
 const App = () => {
   return <Watches />;
 };
-
+```
