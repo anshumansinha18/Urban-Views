@@ -17,7 +17,7 @@ Switch to experimental branch to see progress.
 ## Screenshots
 
 Home Page
-https://user-images.githubusercontent.com/39727166/130365502-91cf39d6-a0bf-45d1-afdb-30ca7a73ed4a.mp4
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/39727166/130365714-04fd8312-3fa9-4a13-b5c4-eacfb6fa8198.gif)
 Register Page
 ![Screenshot (267)](https://user-images.githubusercontent.com/39727166/130365552-808f191d-62fd-476e-b1e2-044aeec92488.png)
 Login Page
