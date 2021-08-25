@@ -76,20 +76,6 @@ router.get("/stats", async (req, res) => {
     const lastYear = today.setFullYear(today.setFullYear() - 1);
 
 
-    const monthsArray = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-    ];
 
     try {
         const data = await User.aggregate([

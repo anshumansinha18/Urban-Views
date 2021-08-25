@@ -1,7 +1,27 @@
 import { InfoOutlined, PlayArrow } from '@material-ui/icons'
 import './featured.scss'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function Featured({ type }) {
+    const [content, setContent] = useState({});
+
+    useEffect(() => {
+        const getRandomContent = async () => {
+            try {
+                const res = await axios.get(`/movies/random?type=${type}`, {
+                    headers: {
+                        token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjE1Njg2OGU0ZWEyMjBmY2NhZThjNCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYyOTkxMjQwMywiZXhwIjoxNjMwMzQ0NDAzfQ.ht1WiL6MnIVGjmorB8N0M548bvU3dTcEj4o65HkU9ys"
+                    }
+                });
+                setContent(res.data[0]);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        getRandomContent();
+    }, [type]);
+
     return (
         <div className="featured">
             {type && (
@@ -26,19 +46,26 @@ export default function Featured({ type }) {
                 </div>
             )}
             {/* FEATURED:  BACKGROUND MOVIE POSTER */}
-            <img src="https://www.rd.com/wp-content/uploads/2019/09/shutterstock_editorial_5884766b-e1569251332374.jpg"
+            {/* <img src="https://www.rd.com/wp-content/uploads/2019/09/shutterstock_editorial_5884766b-e1569251332374.jpg"
+                alt=" "
+            /> */}
+            <img src={content.img}
                 alt=" "
             />
 
             <div className="info">
 
                 {/* FEATURED: DESCRIPTION OF MOVIE FEATURED IN BACKGROUND */}
-                <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e96ba423951497118ed2371e3d8615e3d210236048d0022e0d7d22431e363e60._UY500_UX667_RI_V_TTW_.jpg" alt="" />
+                {/* <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e96ba423951497118ed2371e3d8615e3d210236048d0022e0d7d22431e363e60._UY500_UX667_RI_V_TTW_.jpg" alt="" /> */}
+
+
+                <img
+                    src={content.imgTitle}
+                    alt="" />
+
 
                 <span className="desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor amet eum nisi.
-                    Repellendus illo non eos hic repellat ad neque atque dignissimos laboriosam laudantium vel,
-                    iores alias perferendis voluptate.
+                    {content.desc}
                 </span>
                 <div className="buttons">
                     <button className="play">
