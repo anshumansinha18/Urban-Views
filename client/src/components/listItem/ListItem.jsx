@@ -16,7 +16,7 @@ export default function ListItem({ index, item }) {
             try {
                 const res = await axios.get("/movies/find/" + item, {
                     headers: {
-                        token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjE1Njg2OGU0ZWEyMjBmY2NhZThjNCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYyOTkxMjQwMywiZXhwIjoxNjMwMzQ0NDAzfQ.ht1WiL6MnIVGjmorB8N0M548bvU3dTcEj4o65HkU9ys"
+                        token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjE1Njg2OGU0ZWEyMjBmY2NhZThjNCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMDMzNTQ2MSwiZXhwIjoxNjMwNzY3NDYxfQ.mEd8udktn9NmBUm194jSLzV27-vknEIdkTZ60oIw1OI"
                     }
                 });
                 setMovie(res.data);
@@ -39,7 +39,7 @@ export default function ListItem({ index, item }) {
                 {/* movie image */}
                 <img
                     //src="https://searchengineland.com/figz/wp-content/seloads/2015/08/movie-film-video-production-ss-1920-800x450.jpg"
-                    src={movie.img}
+                    src={movie.imgSm}
                     alt=""
                 />
                 {isHovered && (
@@ -55,7 +55,7 @@ export default function ListItem({ index, item }) {
                                 <ThumbDownOutlined className="icon" />
                             </div>
                             <div className="itemInfoTop">
-                                <span>{movie.duration}</span>
+                                <span>{movie.title}</span>
                                 <span className="limit">+{movie.limit}</span>
                                 <span>{movie.year}</span>
                             </div>

@@ -11,7 +11,7 @@ export default function Featured({ type }) {
             try {
                 const res = await axios.get(`/movies/random?type=${type}`, {
                     headers: {
-                        token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjE1Njg2OGU0ZWEyMjBmY2NhZThjNCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYyOTkxMjQwMywiZXhwIjoxNjMwMzQ0NDAzfQ.ht1WiL6MnIVGjmorB8N0M548bvU3dTcEj4o65HkU9ys"
+                        token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjE1Njg2OGU0ZWEyMjBmY2NhZThjNCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMDMzNTQ2MSwiZXhwIjoxNjMwNzY3NDYxfQ.mEd8udktn9NmBUm194jSLzV27-vknEIdkTZ60oIw1OI"
                     }
                 });
                 setContent(res.data[0]);
@@ -59,11 +59,11 @@ export default function Featured({ type }) {
                 {/* <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e96ba423951497118ed2371e3d8615e3d210236048d0022e0d7d22431e363e60._UY500_UX667_RI_V_TTW_.jpg" alt="" /> */}
 
 
-                <img
-                    src={content.imgTitle}
-                    alt="" />
 
-
+                {/* <img src={content.imgTitle}></img> */}
+                <span className="title">
+                    {content.title}
+                </span>
                 <span className="desc">
                     {content.desc}
                 </span>
