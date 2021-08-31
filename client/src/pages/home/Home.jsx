@@ -1,4 +1,3 @@
-import { AcUnit } from '@material-ui/icons'
 import { useState, useEffect } from 'react'
 import Featured from '../../components/featured/Featured'
 import List from '../../components/list/List'
@@ -32,7 +31,7 @@ const Home = ({ type }) => {
     return (
         <div className="home">
             <Navbar />
-            <Featured type={type} />
+            <Featured type={type} setGenre={setGenre} />
             {lists.map((list) => (
                 <List list={list} />
             ))}

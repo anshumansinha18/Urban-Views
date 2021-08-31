@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import "../../app.scss";
 
 .featured{
     height: 90vh; //viewport height
@@ -55,6 +56,10 @@
         .desc{
             margin: 20px 0px;
             font-size: 16px;
+
+            @include mobile{
+                width: 60vw;
+            }
         }
 
         .buttons{

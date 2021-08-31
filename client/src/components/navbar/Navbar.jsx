@@ -1,11 +1,14 @@
 import "./navbar.scss"
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 import Logo from '../../logo3.png'; //Logo of Urban Views
 import { ArrowDropDown, Notifications, Search } from "@material-ui/icons";
 import { Link } from 'react-router-dom';
+import { AuthContext } from "../../authContext/AuthContext";
+import { logout } from "../../authContext/AuthActions";
 
 const Navbar = () => {
+    const { dispatch } = useContext(AuthContext);
 
     //Adding gradient to navbar when page is on the top
     // Remove gradient from navbar on scrolling down the page
@@ -30,11 +33,11 @@ const Navbar = () => {
                     </img>
                     <span>Homepage</span>
                     <Link to="/series" className="link">
-                        <span>Series</span>
+                        <span className="navbarmainLinks">Series</span>
                     </Link>
 
                     <Link to="/movies" className="link">
-                        <span>Movies</span>
+                        <span className="navbarmainLinks">Movies</span>
                     </Link>
                     <span>New and Popular</span>
                     <span>My List</span>
@@ -53,7 +56,7 @@ const Navbar = () => {
                         <ArrowDropDown className="icon" />
                         <div className="options">
                             <span>Settings</span>
-                            <span>Logout</span>
+                            <span onClick={() => dispatch(logout())}>Logout</span>
                         </div>
                     </div>
                 </div>

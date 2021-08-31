@@ -3,7 +3,7 @@ import './featured.scss'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export default function Featured({ type }) {
+export default function Featured({ type, setGenre }) {
     const [content, setContent] = useState({});
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function Featured({ type }) {
             {type && (
                 <div className="categories">
                     <span>{type === "movie" ? "Movies" : "Series"}</span>
-                    <select name="genre" id="genre">
+                    <select name="genre" id="genre" onChange={e => setGenre(e.target.value)}>
                         <option>Genre</option>
                         <option value="adventure">Adventure</option>
                         <option value="comedy">Comedy</option>
@@ -35,7 +35,7 @@ export default function Featured({ type }) {
                         <option value="fantasy">Fantasy</option>
                         <option value="historical">Historical</option>
                         <option value="horror">Horror</option>
-                        <option value="romance">Romance</option>
+                        <option value="action">Action</option>
                         <option value="sci-fi">Sci-fi</option>
                         <option value="thriller">Thriller</option>
                         <option value="western">Western</option>
