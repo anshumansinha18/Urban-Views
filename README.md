@@ -1,7 +1,6 @@
 # Urban-Views: A movie library web application built with React.js
 
-Note: This project is under development. UI Design for the web application is completed, backend functionalities are being added.
-Switch to experimental branch to see progress.
+Note: Switch to experimental branch to see whole project.
 
 ## Description
 
