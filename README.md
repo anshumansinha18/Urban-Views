@@ -11,7 +11,7 @@ Switch to experimental branch to see progress.
 * Dedicated 'watch page' to watch trailer of movies in separate page.
 * The application is built using React (Custom Hooks, Context).
 * Extensive use of SASS to design every part of application.
-* The movies list will be fetched from MONGODB Database with CRUD option available in the admin section.![Screenshot (272)](https://user-images.githubusercontent.com/39727166/131529667-e100442a-c46f-4b57-98f4-ace8ca62cf92.png)
+* The movies list will be fetched from MONGODB Database with CRUD option available in the admin section.
 
 
 
@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/39727166/131526299-d040afcb-92f4-425e-
 
 ![Screenshot (266)](https://user-images.githubusercontent.com/39727166/130365559-606900fb-3bee-4875-8736-a47ac7569593.png)
 
-![Uploading Screenshot (272).png…]()
+![Screenshot (272)](https://user-images.githubusercontent.com/39727166/131529667-e100442a-c46f-4b57-98f4-ace8ca62cf92.png)
 
 ![Screenshot (273)](https://user-images.githubusercontent.com/39727166/131529707-189ba23e-83f5-46f5-b45a-911029bfe607.png)
 
